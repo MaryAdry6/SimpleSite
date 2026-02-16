@@ -1,7 +1,7 @@
-<!-- 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 -->\
+<!-- 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 -->
 
-<?xml version="1.0" encoding="UTF-8" ?>
-    <persoane>
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
+<persoane>
         <persoana id="1">
             <nume>Ciurila</nume>
             <prenume>Adriana</prenume>
@@ -50,4 +50,3 @@
             <studii>liceu</studii>
         </persoana>
     </persoane>
-
