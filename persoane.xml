@@ -1,0 +1,18 @@
+<!-- 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 -->\
+
+<?xml version="1.0" encoding="UTF-8" ?>
+    <persoane>
+        <persoana id="1">
+            <nume>Ciurila</nume>
+            <prenume>Adriana</prenume>
+            <varsta>21</varsta>
+            <adresa>
+                <strada>Alexandru cel Bun</strada>
+                <numar>47</numar>
+                <localitate>Iasi</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+        </persoana>
+    </persoane>
+
