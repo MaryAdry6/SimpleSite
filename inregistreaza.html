@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "ro">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Înregistrează-te</title>
+
+        <link rel="icon" type="image/png"
+            href="imagini/icon.png"/>
+    </head>
+
+    <body>
+        <header>
+            <h1>Bad Bunny</h1>
+
+            <nav>
+                <h2>
+                    <a href="index.html">Acasă | </a>
+                    <a href="despre.html">Despre | </a>
+                    <a href="video.html">Video | </a>
+                    <a href="desen.html">Desen</a>
+                    <a href="inregistreaza.html">Înregistrează-te </a>
+                </h2>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <br>
+                <h3>Informații generale:</h3>
+                <form>
+                    <label for="name"> Nume utilizator:</label>
+                    <input type="text" id="name" name="NumeUtil">
+                    <br>
+
+                    <label for="parola"> Parolă: </label>
+                    <input type="password" id="parola" name="Parola">
+                    <br>
+
+                    <label for="nume"> Nume: </label>
+                    <input type="text" id="nume" name="Nume">
+                    <br>
+
+                    <label for="prenume"> Prenume: </label>
+                    <input type="text" id="prenume" name="Prenume">
+                    <br>
+
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" name="email">
+                    <br>
+
+                    <label for="tel"> Telefon: </label>
+                    <input type="tel" id="tel" name="Telefon">
+                    <br><br>
+                </form>
+            </section>
+
+            <section>
+                <br>
+                <h3>Informații personale:</h3>
+                <form>
+                    <label for="sex"> Sex:</label>
+                    <select name="sex" id="sex">
+                        <option value="Feminin">Feminin</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Altul">Altul</option>
+                    </select>
+                    <br>
+
+                    <label for="gen"> Sexul tău:</label><br>
+                        <input type="radio" id="fem" name="gen" value="fem">
+                        <label for="fem">Feminin</label><br>
+                        <input type="radio" id="masc" name="gen" value="masc">
+                        <label for="masc">Masculin</label><br>
+                        <input type="radio" id="alt" name="fav_language" value="altul">
+                        <label for="alt">Altul</label>
+                    <br><br>
+
+                    <label for="album">Albumul preferat:</label>
+                    <select name="album" id="album">
+                        <option value="X 100pre">X 100pre</option>
+                        <option value="YHLQMDLG">YHLQMDLG</option>
+                        <option value="El Último Tour Del Mundo">El Último Tour Del Mundo</option>
+                        <option value="Un Verano Sin Ti">Un Verano Sin Ti</option>
+                        <option value="Debí Tirar Más Fotos">Debí Tirar Más Fotos</option>
+                    </select>
+                    <br><br>
+
+                    <input type="checkbox" id="acord" name="acord" value="da">
+                    <label for="acord">Sunt de acord cu procesarea datelor</label>
+                    <br>
+                    <button type="submit">Trimite</button>
+                    <button type="reset">Resetează</button>
+                </form>
+            </section>
+
+        </main>
+
+    <footer>
+        &copy; <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
+    </footer>
+</body>
