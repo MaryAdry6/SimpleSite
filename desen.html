@@ -18,17 +18,55 @@
                     <a href="index.html">Acasă | </a>
                     <a href="despre.html">Despre | </a>
                     <a href="video.html">Video | </a>
-                    <a href="desen.html">Desen</a>
+                    <a href="desen.html">Desen | </a>
                     <a href="inregistreaza.html">Înregistrează-te </a>
                 </h2>
             </nav>
         </header>
 
         <main>
-            
+            <svg height="500" width="500">
+                <linearGradient id="grad1">
+                    <stop offset="0%" stop-color="PaleTurquoise" />
+                    <stop offset="40%" stop-color="PaleGreen" />
+                    <stop offset="60%" stop-color="NavajoWhite" />
+                    <stop offset="100%" stop-color="PaleVioletRed" />
+                </linearGradient>
+                <linearGradient id="grad2">
+                    <stop offset="-5%" stop-color="PaleTurquoise" />
+                    <stop offset="110%" stop-color="PaleGreen" />
+                </linearGradient>
+                <linearGradient id="grad3">
+                    <stop offset="-5%" stop-color="NavajoWhite" />
+                    <stop offset="110%" stop-color="PaleVioletRed" />
+                </linearGradient>
+                <ellipse cx="360" cy="280" rx="30" ry="100" fill="none" style="stroke:black;stroke-width:10;" transform="rotate(10, 360, 280)"/>
+                <ellipse cx="260" cy="280" rx="30" ry="100" fill="none" style="stroke:black;stroke-width:10;" transform="rotate(350, 260, 280)"/>
+                <ellipse cx="310" cy="400" rx="90" ry="80" fill="none" style="stroke:black;stroke-width:8;"/>
+                
+                <ellipse cx="360" cy="280" rx="30" ry="100" fill="url(#grad3)" transform="rotate(10, 360, 280)"/>
+                <text fill="black" font-size="25" font-family="Comic Sans MS" font-weight="bold" x="355" y="300" transform="rotate(280, 355, 300)">Bad </text>
+                <text fill="black" font-size="25" font-family="Comic Sans MS" font-weight="bold" x="375" y="310" transform="rotate(280, 375, 310)"> Bunny</text>
+                <ellipse cx="260" cy="280" rx="30" ry="100" fill="url(#grad2)" transform="rotate(350, 260, 280)"/>
+                <ellipse cx="310" cy="400" rx="90" ry="80" fill="url(#grad1)"></ellipse>
+
+                <path d="M 295 420 A 30 70 0 0 1 325 420" fill="#black" />
+
+                <rect x="260" y="370" width="5" height="30" fill="black" />
+                <rect x="249" y="380" width="25" height="5" fill="black" />
+                <rect x="360" y="370" width="5" height="30" fill="black" /> 
+                <rect x="349" y="380" width="25" height="5" fill="black" />
+            </svg>
+
+            <svg height="500" width="800">
+               <circle cx="52" cy="50" r="50" fill="red" />
+               <circle cx="148" cy="50" r="50" fill="red" />
+               <polygon points="16,85 100,180 184,85 100,50" fill="red" />
+            </svg>
         </main>
 
         <footer>
+        <hr>
             &copy; <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
         </footer>
     </body>
