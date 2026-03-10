@@ -1,0 +1,30 @@
+header {
+    background-color: #A35B51;
+    font-family: "Montserrat", sans-serif;
+}   
+
+nav, header h1 {
+    display: flex;
+    justify-content: space-evenly;
+}   
+nav a, header h1 {
+    text-decoration: none;
+    padding: 0px 50px;
+    color: #F8F8F8;
+}
+nav a:hover {
+    background-color: #7AA7BB;
+    color: #A35B51;
+    transition: 0.5s;
+}
+/*
+padding: 0px 5px     10px 15px 
+         sus dreapta jos  stanga
+*/
+
+/* 
+:   pseudoclasa
+::  pseudoelement
+*/
+
+
