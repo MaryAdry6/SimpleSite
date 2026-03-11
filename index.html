@@ -1,67 +1,70 @@
-<!-- Pagina acasa(home); pagina principala; se numeste index in orice proiect-->
+    <!-- Pagina acasa(home); pagina principala; se numeste index in orice proiect-->
 
-<!DOCTYPE html>
-<html lang = "ro">
+    <!DOCTYPE html>
+    <html lang = "ro">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Acasă</title>
+        <head>
+            <meta charset="UTF-8">
+            <title>Acasă</title>
 
-        <link rel="icon" type="image/png"
-            href="imagini/icon.png"/>
-        <link rel="stylesheet" type="text/css"
-            href="css/stil.css" />
+            <link rel="icon" type="image/png"
+                href="imagini/icon.png"/>
+            <link rel="stylesheet" type="text/css"
+                href="css/stil.css" />
 
-        <!-- google font aici -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <!-- google font aici -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    </head>
+        </head>
 
-    <body>
-        <header>
-            <h1>Bad Bunny</h1>
+        <body>
+            <header>
+                <h1>Bad Bunny</h1>
 
-            <!-- FLEXBOX mereu pe parinte, nu pe copii (in nav, nu in a) -->
-            <nav class="blue-background" id="nav-main">
-                <h2>
-                    <a href="index.html">Acasă</a>
-                    <a href="despre.html">Despre</a>
-                    <a href="video.html">Video</a>
-                    <a href="desen.html">Desen</a>
-                    <a href="inregistreaza.html">Înregistrează-te </a>
-                </h2>
-            </nav>
-        </header>
+                <!-- FLEXBOX mereu pe parinte, nu pe copii (in nav, nu in a) -->
+                <nav class="blue-background" id="nav-main">
+                    <h2>
+                        <a href="index.html">Acasă</a>
+                        <a href="despre.html">Despre</a>
+                        <a href="video.html">Video</a>
+                        <a href="desen.html">Desen</a>
+                        <a href="inregistreaza.html">Înregistrează-te </a>
+                    </h2>
+                </nav>
+            </header>
+            
+            <main>
+                <section class="acasa">
+                    <img id="img-acasa" src="imagini/BadBunny_acasa.png"
+                    alt="Bad Bunny în concert">
 
-        <main>
-            <br>
-            <section>
-                <a href="despre.html"><h3>Despre</h3></a> 
-                <div>Această pagină este dedicată pentru informații genereale despre cunoscutul cântăreț <b>Bad Bunny</b>.</div>
-            </section>
+                    <div class="vertical-list">
+                        <a href="despre.html" class="btn-home">
+                            <h3>Despre</h3>
+                            <span class="descriere">Această pagină este dedicată pentru informații genereale despre cunoscutul cântăreț <b>Bad Bunny</b>.</span>
+                        </a> 
+                        <a href="video.html" class="btn-home">
+                            <h3>Videoclipuri</h3>
+                            <span class="descriere">Această pagină prezintă 3 videoclipuri. Primul este performanța live de la spectacolul de pauză al Super Bowl-ului din 2026,
+                                                    iar celelalte două sunt scenete amuzante din emisiunea americană <i>Saturday Night Live (SNL)</i> în care Bad Bunny a fost invitat.</span>
+                        </a> 
+                        <a href="desen.html" class="btn-home">
+                            <h3>Desen</h3>
+                            <span class="descriere">Această pagină înfățișează un desen reprezentativ pentru tema site-ului.</span>
+                        </a> 
+                        <a href="inregistreaza.html" class="btn-home">
+                            <h3>Înregistrează-te</h3>
+                            <span class="descriere">Această pagină este dedicată pentru formularul de Înregistrare.</span>
+                        </a>
+                    </div>
+                </section>
 
-            <section>
-                <a href="video.html"><h3>Videoclipuri</h3></a> 
-                Această pagină prezintă 3 videoclipuri. Primul este performanța live de la spectacolul de pauză al Super Bowl-ului din 2026,
-                <br>iar celelalte două sunt scenete amuzante din emisiunea americană <i>Saturday Night Live (SNL)</i> în care Bad Bunny a fost invitat.
-            </section>
+            </main>
 
-            <section>
-                <a href="desen.html"><h3>Desen</h3></a> 
-                Această pagină înfățișează un desen reprezentativ pentru tema site-ului.
-            </section>
-
-            <section>
-                <a href="inregistreaza.html"><h3>Înregistrează-te</h3></a> 
-                Această pagină este dedicată pentru formularul de Înregistrare.
-            </section>
-            <br><br>
-        </main>
-
-        <footer>
-        <hr>
-            &copy; <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
-        </footer>
-    </body>
+            <footer>
+            <hr>
+                &copy; <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
+            </footer>
+        </body>

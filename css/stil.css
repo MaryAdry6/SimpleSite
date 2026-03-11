@@ -1,22 +1,156 @@
+:root {
+    --color-pink: #D76573;
+    --color-purple: #CFB2CF;
+    --color-green: #998B58;
+    --color-crem: #EEBB78;
+    --color-white: #FAFAFB;
+    --header-height: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* BARA NAVIGARE */
 header {
-    background-color: #A35B51;
-    font-family: "Montserrat", sans-serif;
-}   
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: var(--header-height);
+    padding: 8px;
+    background-color: var(--color-pink);
+    color: var(--color-white);
+
+    z-index: 5;
+    overflow: visible;
+}  
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--color-pink);
+
+    clip-path: ellipse(50% 85% at 50% 0%);
+}
 
 nav, header h1 {
     display: flex;
     justify-content: space-evenly;
-}   
-nav a, header h1 {
+}
+
+header h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: var(--color-white);
+    padding-bottom: 15px;
+}
+
+nav a{
     text-decoration: none;
-    padding: 0px 50px;
-    color: #F8F8F8;
+    padding: 8px 40px 5px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--color-white);
 }
+
 nav a:hover {
-    background-color: #7AA7BB;
-    color: #A35B51;
-    transition: 0.5s;
+    margin: 0;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: var(--color-purple);
+    color: var(--color-pink);
 }
+
+main {
+    margin-top: calc(var(--header-height) + 25px);
+}
+
+#img-acasa {
+    position: fixed;
+    margin-top: -25px;
+    width: 100%;
+}
+
+
+
+
+
+/* INDEX */
+.acasa {
+    position: relative;
+    width: 100%;
+}
+
+.vertical-list {
+    position: absolute;
+    top: calc(var(--header-height) + 30px);
+    left: 15%;
+    
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;         
+    z-index: 2;
+}
+
+.btn-home {
+    position: relative;
+    background-color: var(--color-crem);
+    color: var(--color-green);
+    padding: 30px 50px;
+
+    display: flex;       /* Ajută la centrarea textului din buton */
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--color-green);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: block;
+}
+
+.descriere {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 105%;
+    
+    background-color: var(--color-green);
+    color: var(--color-crem);
+    padding: 15px;
+    width: 350px; 
+    border-radius: 10px;
+    border: 2px solid var(--color-crem);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    box-shadow: 5px 5px 15px var(--color-white);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.btn-home:hover {
+    background-color: var(--color-green);
+    color: var(--color-crem);
+    border: 2px solid var(--color-crem);
+}
+
+.btn-home:hover .descriere {
+    display: block;
+}
+
+
+
+
 /*
 padding: 0px 5px     10px 15px 
          sus dreapta jos  stanga
