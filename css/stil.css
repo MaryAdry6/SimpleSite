@@ -18,6 +18,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-pink) var(--color-purple);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -149,7 +154,7 @@ nav a:hover {
     left: 15%;
      */
     margin-left: 15%;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 50px;
 
     display: flex;
@@ -164,7 +169,7 @@ nav a:hover {
     position: relative;
     background-color: var(--color-crem);
     color: var(--color-green);
-    padding: 30px 50px;
+    padding: 45px 55px;
 
     display: flex;
     align-items: center;
@@ -172,7 +177,7 @@ nav a:hover {
     
     border: 2px solid var(--color-green);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-family: var(--font-titlu);
     border-radius: 10px;
     transition: 0.3s;
@@ -230,14 +235,22 @@ nav a:hover {
 
 /* Video */
 
+#video-main {
+    background-color: var(--color-crem);
+    margin-top: var(--header-height)
+}
+
 .galerie {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     height: 500px;
     gap: 15px;
+    padding-top: calc(var(--curbe-height) + 15px);
     padding-bottom: 15px;
-    padding-top: 15px;
+
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-pink) var(--color-purple);
 }
 
 .item-galerie {
@@ -246,7 +259,12 @@ nav a:hover {
     width: 50%;
     height: 100%;
     border-radius: 10px;
+    transition: all 0.4s ease-out;
+}
 
+.item-galerie:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -264,12 +282,10 @@ nav a:hover {
     0% {
         opacity: 0;
         transform: translateX(-20px);
-        /* transform: translateY(20px); */
     }
     100% {
         opacity: 1;
         transform: translateX(0);
-        /* transform: translateY(0); */
     }
 }
 
