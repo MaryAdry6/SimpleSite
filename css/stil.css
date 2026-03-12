@@ -88,7 +88,7 @@ nav, header h1 {
 header h1 {
     font-family: var(--font-titlu);
     color: var(--color-white);
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 nav a{
