@@ -41,7 +41,9 @@ footer {
 footer span {
     color: var(--color-purple) !important;
 }
-footer hr {
+
+
+hr {
     border: none;
     border-top: 2px solid var(--color-purple);
     margin-bottom: 5px;
@@ -64,7 +66,7 @@ header {
 
     z-index: 5;
     overflow: visible;
-}  
+}
 
 header::after {
     content: "";
@@ -142,13 +144,18 @@ nav a:hover {
 }
 
 .vertical-list {
-    position: absolute;
+    /* position: absolute;
     top: calc(var(--header-height) + 30px);
     left: 15%;
-    
+     */
+    margin-left: 15%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
     display: flex;
     flex-direction: column;
 
+    width: max-content;
     gap: 15px;         
     z-index: 2;
 }
