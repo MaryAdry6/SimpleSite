@@ -31,7 +31,7 @@ body {
 
 main {
     flex: 1;
-    margin-top: calc(var(--header-height) + var(--curbe-height));
+    margin-top: var(--header-height);
 }
 
 
@@ -53,6 +53,11 @@ hr {
     border-top: 2px solid var(--color-purple);
     margin-bottom: 5px;
 }
+
+
+
+
+
 
 
 
@@ -133,11 +138,12 @@ nav a:hover {
 
 
 
+
+
 /* INDEX */
 
 #img-acasa {
     position: fixed;
-    margin-top: calc(var(--curbe-height) * -1);
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -233,6 +239,11 @@ nav a:hover {
 
 
 
+
+
+
+
+
 /* Video */
 
 #video-main {
@@ -266,6 +277,129 @@ nav a:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+
+
+
+
+
+
+/* DESPRE */
+
+.zona-poza1 {
+    background-image: url('../imagini/BadBunny_home.png');
+    background-size: cover;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 100%;
+}
+
+.bio {
+    /* order: 2; */
+    background-color: var(--color-purple);
+    border: 2px solid var(--color-pink);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: var(--font-text);
+    color: var(--color-white);
+    z-index: 2;
+}
+.bio b {
+    color: var(--color-pink);
+}
+
+.muzica {
+    /* order: 1; */
+    background-color: var(--color-purple);
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid var(--color-pink);
+    width: 25%;
+    margin-right: 35px;
+    font-size: 25px;
+    font-family: var(--font-titlu);
+    color: var(--color-white);
+    z-index: 2;
+}
+.muzica ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 20px;
+}
+.muzica i {
+    color: var(--color-pink);
+    width: 35px;
+    text-align: center;
+}
+
+.muzica a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+.muzica a:hover {
+    color: var(--color-pink);
+    text-shadow: 3px 3px 8px var(--color-white);
+    transition: 0.2s;
+}
+.muzica h3:hover {
+    transition: 0.3s;
+    transform: translateY(-3px);
+}
+
+.formular {
+    background-image: url('../imagini/BadBunny_home2.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+th, td {
+    border: 2px solid var(--color-crem);
+    text-align: center;
+    font-family: var(--font-text);
+    font-size: 20px;
+    background-color: var(--color-white);
+    color: var(--color-green)
+}
+caption {
+    padding-top: 10px;
+    font-family: var(--font-titlu);
+    font-size: 25px;
+    color: var(--color-crem);
+    text-shadow: 3px 3px 8px var(--color-purple);
+}
+th {
+    font-family: var(--font-titlu);
+    font-size: 30px;
+    color: var(--color-crem);
+    -webkit-text-stroke: 1px var(--color-green);
+}
+
+.tabel {
+    background-color: var(--color-green);
+}
+
+table {
+    background-color: var(--color-green);
+    width: 100%;
+    min-height: 85vh;
+    padding-bottom: 50px;
+}
+
 
 
 
