@@ -73,7 +73,6 @@
             </div>
             
             <section class="tabel">
-                <br>
                 <table>
                     <caption><h3>Albume de studio solo:</h3></caption>
                     <tr>
@@ -122,21 +121,30 @@
             </section>
 
             <section class="formular">
-                <br>
-                <h3>Recensământ important!</h3>
+                <h3>Dorești să fii primul care află informații noi despre Bad Bunny? Abonează-te la <i>newsletter</i>!</h3>
                 <form>
                     <label for="name"> Numele tău:</label>
                     <input type="text" id="name" name="Nume">
-                    <br><br>
+                    <br>
+
+                    <label for="mail"> Email-ul tău:</label>
+                    <input type="text" id="mail" name="Mail">
+                    <br>
 
                     <label for="gen"> Genul tău:</label><br>
-                        <input type="radio" id="fem" name="gen" value="fem">
-                        <label for="fem">Feminin</label><br>
-                        <input type="radio" id="masc" name="gen" value="masc">
-                        <label for="masc">Masculin</label><br>
-                        <input type="radio" id="alt" name="fav_language" value="altul">
-                        <label for="alt">Altul</label>
-                    <br><br>
+                        <div class="optiuni">
+                            <input type="radio" id="fem" name="gen" value="fem">
+                            <label for="fem">Feminin</label>
+                        </div>
+                        <div class="optiuni">
+                            <input type="radio" id="masc" name="gen" value="masc">
+                            <label for="masc">Masculin</label>
+                        </div>
+                        <div class="optiuni">
+                            <input type="radio" id="alt" name="gen" value="altul">
+                            <label for="alt">Altul</label>
+                        </div>
+                    <br>
 
                     <label for="album">Albumul preferat: </label>
                     <select name="album" id="album">
@@ -146,20 +154,23 @@
                         <option value="Un Verano Sin Ti">Un Verano Sin Ti</option>
                         <option value="Debí Tirar Más Fotos">Debí Tirar Más Fotos</option>
                     </select>
-                    <br><br>
-
-                    <input type="checkbox" id="acord" name="acord" value="da">
-                    <label for="acord">Sunt de acord cu procesarea datelor</label>
                     <br>
-                    <button type="submit">Trimite</button>
-                    <button type="reset">Resetează</button>
+
+                    <div class="acord">
+                        <input type="checkbox" id="acord" name="acord" value="da">
+                        <label for="acord">Sunt de acord cu procesarea datelor</label>
+                    </div>
+
+                    <div class="butoane">
+                        <button type="submit">Trimite</button>
+                        <button type="reset">Resetează</button>
+                    </div>
                 </form>
             </section>
 
             <section class="iframeuri">
-                <br><br>
-                <h3>Recomandări de melodii ale lui Bad Bunny:</h3>
-                <iframe src="https://open.spotify.com/embed/playlist/6AK3x2YNdGZPSStsYM7g2u" title="My Playlist" height="600" width="925"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/6AK3x2YNdGZPSStsYM7g2u" title="My Playlist"></iframe>
+                <img src="imagini/BadBunny_iFrame.png" alt="Imaginea de campanie pentru anunțarea albumului Debí Tirar Más Fotos">
             </section>
         
         </main>

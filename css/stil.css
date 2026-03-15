@@ -10,6 +10,7 @@
     --curbe-height: 20px;
     --font-titlu: "Archivo Black", sans-serif;
     --font-text: "Josefin Sans", sans-serif;
+    --curbura: 10px;
 }
 
 * {
@@ -21,6 +22,10 @@
 html {
     scrollbar-width: auto;
     scrollbar-color: var(--color-pink) var(--color-purple);
+
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: calc(var(--header-height)); 
+    scroll-behavior: smooth;
 }
 
 body {
@@ -110,7 +115,7 @@ nav a{
 
 nav a:hover {
     margin: 0;
-    border-radius: 10px;
+    border-radius: var(--curbura);
     transition: 0.5s;
     background-color: var(--color-purple);
     color: var(--color-pink);
@@ -185,7 +190,7 @@ nav a:hover {
     text-decoration: none;
     font-size: 25px;
     font-family: var(--font-titlu);
-    border-radius: 10px;
+    border-radius: var(--curbura);
     transition: 0.3s;
     display: block;
 }
@@ -200,7 +205,7 @@ nav a:hover {
     color: var(--color-crem);
     padding: 15px;
     width: 350px; 
-    border-radius: 10px;
+    border-radius: var(--curbura);
     border: 2px solid var(--color-crem);
     font-family: var(--font-text);
     font-size: 20px;
@@ -269,13 +274,13 @@ nav a:hover {
     border: 5px solid var(--color-purple);
     width: 50%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: var(--curbura);
     transition: all 0.4s ease-out;
 }
 
 .item-galerie:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 15px black;
 }
 
 
@@ -289,28 +294,35 @@ nav a:hover {
 
 /* DESPRE */
 
+.zona-poza1, .tabel, .formular, .iframeuri {
+    scroll-snap-align: start;
+    min-height: calc(100vh - var(--header-height));
+}
+
 .zona-poza1 {
     background-image: url('../imagini/BadBunny_home.png');
     background-size: cover;
-    min-height: 100vh;
+    background-position: center;
+    /* min-height: 100vh; */
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
 
     position: relative;
     width: 100%;
 }
 
 .bio {
-    /* order: 2; */
+    order: 2;
     background-color: var(--color-purple);
     border: 2px solid var(--color-pink);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--curbura);
     width: 30%;
-    margin-left: 30px;
+    margin-right: 35px;
     font-size: 25px;
     font-family: var(--font-text);
     color: var(--color-white);
@@ -321,13 +333,13 @@ nav a:hover {
 }
 
 .muzica {
-    /* order: 1; */
+    order: 1;
     background-color: var(--color-purple);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: var(--curbura);
     border: 3px solid var(--color-pink);
     width: 25%;
-    margin-right: 35px;
+    margin-left: 35px;
     font-size: 25px;
     font-family: var(--font-titlu);
     color: var(--color-white);
@@ -358,17 +370,114 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
+
+
 .formular {
     background-image: url('../imagini/BadBunny_home2.png');
     background-size: cover;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    padding-top: 20px;
+    padding-left: 20px;
+
+    /* container-type: size;  */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
+.formular h3 {
+    font-family: var(--font-titlu);
+    width: max-content;
+    max-width: 100%;
+    height: 10vh;
+    font-size: 24px;
+    margin: 0;
+    color: var(--color-green);
+    -webkit-text-stroke: 1px var(--color-crem);
+    text-shadow: 5px 5px 15px var(--color-green);
+}
+.formular form {
+    background-color: var(--color-crem);
+    border-radius: var(--curbura);
+    border: 3px solid var(--color-green);
+    width: 35%;
+    height: 70vh;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    font-family: var(--font-text);
+    font-size: 20px;
+    color: var(--color-white);
+}
+.formular input, select {
+    background-color: var(--color-crem);
+    color: var(--color-green);
+
+    font-family: var(--font-text);
+    font-size: 18px;
+
+    border-radius: var(--curbura);
+    border: 3px solid var(--color-green);
+}
+.optiuni {
+    display: flex;
+    align-items: center;
+    flex-direction: row; 
+    margin-bottom: 5px;
+    padding-left: 30px;
+}
+.optiuni input {
+    width: auto;
+    margin-right: 10px;
+    border: none;
+}
+.optiuni input[type="radio"],
+.acord input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.acord {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.butoane {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 10px;
+}
+.butoane button{
+    background-color: var(--color-green);
+    color: var(--color-crem);
+    border-radius: var(--curbura);
+    border: 3px solid var(--color-purple);
+    font-family: var(--font-titlu);
+
+    flex: 1; 
+    padding: 5px;
+    
+    font-family: var(--font-titlu);
+    font-size: 20px;
+    cursor: pointer;
+}
+.butoane button:hover {
+    box-shadow: 3px 3px 15px var(--color-purple);
+    transition: 0.3s;
+    transform: translateY(3px);
+}
+
+
 
 th, td {
     border: 2px solid var(--color-crem);
+    border-radius: var(--curbura);
     text-align: center;
     font-family: var(--font-text);
     font-size: 20px;
@@ -376,7 +485,7 @@ th, td {
     color: var(--color-green)
 }
 caption {
-    padding-top: 10px;
+    padding-top: 20px;
     font-family: var(--font-titlu);
     font-size: 25px;
     color: var(--color-crem);
@@ -391,16 +500,112 @@ th {
 
 .tabel {
     background-color: var(--color-green);
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
 }
 
 table {
     background-color: var(--color-green);
     width: 100%;
-    min-height: 85vh;
-    padding-bottom: 50px;
+    height: 80vh;
+    /* padding-bottom: 50px; */
 }
 
+.iframeuri {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
+    padding: 10px;
+    gap: 10px;
+
+    background-color: var(--color-purple);
+    min-height: calc(100vh - var(--header-height) - 45px);
+}
+.iframeuri img {
+    flex: 1;
+    order: 1;
+    height: 80vh;
+    object-fit: cover; 
+    border-radius: var(--curbura);
+    border: 2px solid var(--color-pink);
+}
+.iframeuri iframe {
+    flex: 1;
+    order: 2;
+    height: 80vh;
+    border-radius: var(--curbura);
+    border: 2px solid var(--color-pink);
+}
+
+@media (max-width: 921px) {
+    html {
+        scroll-snap-type: none;
+    }
+    .zona-poza1, .tabel, .formular, .iframeuri {
+        scroll-snap-align: none;
+        min-height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .zona-poza1 {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .bio, .muzica {
+        width: 90%;
+        margin: 0;
+        order: unset;
+        font-size: 20px;
+    }
+
+    .formular {
+        align-items: center;
+        padding-left: 0;
+    }
+    .formular h3 {
+        width: 90%;
+        height: auto;
+        text-align: center;
+        /* font-size: 20px; */
+        margin-bottom: 15px;
+    }
+    .formular form {
+        width: 75%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .tabel {
+        padding: 10px;
+    }
+    table {
+        height: auto;
+        display: block;
+    }
+    th, td {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .iframeuri {
+        flex-direction: column;
+    }
+    .iframeuri img {
+        flex: none;
+        order: unset;
+        width: 90%;
+    }
+    .iframeuri iframe {
+        flex: none;
+        order: unset;
+        width: 90%;
+    }
+}
 
 
 
