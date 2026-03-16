@@ -25,104 +25,135 @@
                     <a href="despre.html">Despre</a>
                     <a href="video.html">Video</a>
                     <a href="desen.html">Desen</a>
+                    <a href="invat.html">Învață</a>
                     <a href="inregistreaza.html">Înregistrează-te </a>
                 </h2>
             </nav>
         </header>
 
-        <main>
-            <section>
-                <br>
-                <h3>Informații generale:</h3>
+        <main id="inreg-main">
+            <div class="img-stanga">
+                <img src="imagini/album1.png" alt="Cover Album X 100pre">
+                <img src="imagini/album2.png" alt="Cover Album YHLQMDLG">
+                <img src="imagini/album3.png" alt="Cover Album El Último Tour Del Mundo">
+                <img src="imagini/album4.png" alt="Cover Album Nadie Sabe Lo Que Va a Pasar Mañana">
+                <img src="imagini/album5.png" alt="Cover Album Un Verano Sin Ti">
+                <img src="imagini/album6.png" alt="Cover Album Debí Tirar Más Fotos">
+
+                <img src="imagini/album1.png" alt="Cover Album X 100pre">
+                <img src="imagini/album2.png" alt="Cover Album YHLQMDLG">
+                <img src="imagini/album3.png" alt="Cover Album El Último Tour Del Mundo">
+                <img src="imagini/album4.png" alt="Cover Album Nadie Sabe Lo Que Va a Pasar Mañana">
+                <img src="imagini/album5.png" alt="Cover Album Un Verano Sin Ti">
+                <img src="imagini/album6.png" alt="Cover Album Debí Tirar Más Fotos">
+            </div>
+
+            <section class="inreg">
                 <form>
-                    <label for="name"> Nume utilizator: </label>
-                    <input type="text" id="name" name="NumeUtil">
-                    <br>
+                    <fieldset class="generale">
+                        <legend>Informații generale:</legend>
 
-                    <label for="parola"> Parolă: </label>
-                    <input type="password" id="parola" name="Parola">
-                    <br>
+                        <label for="name"> Nume utilizator: </label>
+                        <input type="text" id="name" name="NumeUtil">
+                        <br>
 
-                    <label for="nume"> Nume: </label>
-                    <input type="text" id="nume" name="Nume">
-                    <br>
+                        <label for="parola"> Parolă: </label>
+                        <input type="password" id="parola" name="Parola">
+                        <br>
 
-                    <label for="prenume"> Prenume: </label>
-                    <input type="text" id="prenume" name="Prenume">
-                    <br>
+                        <label for="nume"> Nume: </label>
+                        <input type="text" id="nume" name="Nume">
+                        <br>
 
-                    <label for="email"> Email: </label>
-                    <input type="email" id="email" name="email">
-                    <br>
+                        <label for="prenume"> Prenume: </label>
+                        <input type="text" id="prenume" name="Prenume">
+                        <br>
 
-                    <label for="tel"> Telefon: </label>
-                    <input type="tel" id="tel" name="Telefon">
-                    <br><br>
+                        <label for="email"> Email: </label>
+                        <input type="email" id="email" name="email">
+                        <br>
+
+                        <label for="tel"> Telefon: </label>
+                        <input type="tel" id="tel" name="Telefon">
+                        <br>
+                    </fieldset>
+
+                    <fieldset class="personale">
+                        <legend>Informații personale:</legend>
+
+                        <label for="sex"> Sex:</label>
+                        <select name="sex" id="sex">
+                            <option value="Feminin">Feminin</option>
+                            <option value="Masculin">Masculin</option>
+                            <option value="Altul">Altul</option>
+                        </select>
+                        <br>
+
+                        <label for="album"> Melodia preferată: </label>
+                        <input list="album" id="album" name="album" placeholder="Scrie sau alege...">
+                        <datalist name="album" id="album">
+                            <option value="X 100pre"></option>
+                            <option value="YHLQMDLG"></option>
+                            <option value="El Último Tour Del Mundo"></option>
+                            <option value="Nadie Sabe Lo Que Va a Pasar Mañana"></option>
+                            <option value="Un Verano Sin Ti"></option>
+                            <option value="Debí Tirar Más Fotos"></option>
+                        </datalist>
+                        <br>
+
+                        <label for="culoare"> Culoare preferată: </label>
+                        <input type="color" id="culoare" name="culoare">
+                        <br>
+
+                        <label for="data"> Dată naștere: </label>
+                        <input type="date" id="data" name="data">
+                        <br>
+
+                        <label for="ora"> La ce oră ascultați cel mai des discografia lui Bad Bunny? &nbsp;</label>
+                        <input type="time" id="ora" name="ora">
+                        <br>
+
+                        <label for="like"> Cât de mult vă place muzica lui Bad Bunny? &nbsp;</label>
+                        <input type="range" id="like" name="like">
+                        <br>
+
+                        <label for="url"> Site personal: </label>
+                        <input type="url" id="url" name="url">
+                        <br>
+
+                        <label for="song"> Care este motivul pentru vă place Bad Bunny?</label>
+                        <textarea id="song" name="song" rows="1" cols="25">Pentru că ...</textarea>
+                        <br>
+                    </fieldset>
+
+                    <div class="inreg-butoane">
+                        <button type="submit" disabled>Înregistrează</button>
+                        <button type="reset">Resetează</button>
+                    </div>
                 </form>
             </section>
-            
-            <section>
-                <br>
-                <h3>Informații personale:</h3>
-                <form>
-                    <label for="sex"> Sex:</label>
-                    <select name="sex" id="sex">
-                        <option value="Feminin">Feminin</option>
-                        <option value="Masculin">Masculin</option>
-                        <option value="Altul">Altul</option>
-                    </select>
-                    <br>
 
-                    <label for="album"> Album preferat: </label>
-                    <select name="album" id="album">
-                        <option value="X 100pre">X 100pre</option>
-                        <option value="YHLQMDLG">YHLQMDLG</option>
-                        <option value="El Último Tour Del Mundo">El Último Tour Del Mundo</option>
-                        <option value="Un Verano Sin Ti">Un Verano Sin Ti</option>
-                        <option value="Debí Tirar Más Fotos">Debí Tirar Más Fotos</option>
-                    </select>
-                    <!-- <datalist name="album" id="album">
-                        <option value="X 100pre">
-                        <option value="YHLQMDLG">
-                        <option value="El Último Tour Del Mundo">
-                        <option value="Un Verano Sin Ti">
-                        <option value="Debí Tirar Más Fotos">
-                    </datalist> -->
-                    <br>
+            <div class="img-dreapta">
+                <img src="imagini/album1.png" alt="Cover Album X 100pre">
+                <img src="imagini/album2.png" alt="Cover Album YHLQMDLG">
+                <img src="imagini/album3.png" alt="Cover Album El Último Tour Del Mundo">
+                <img src="imagini/album4.png" alt="Cover Album Nadie Sabe Lo Que Va a Pasar Mañana">
+                <img src="imagini/album5.png" alt="Cover Album Un Verano Sin Ti">
+                <img src="imagini/album6.png" alt="Cover Album Debí Tirar Más Fotos">
 
-                    <label for="culoare"> Culoare preferată: </label>
-                    <input type="color" id="culoare" name="culoare">
-                    <br>
-
-                    <label for="data"> Dată naștere: </label>
-                    <input type="date" id="data" name="data">
-                    <br>
-
-                    <label for="ora"> La ce oră ascultați cel mai des discografia lui Bad Bunny? &nbsp;</label>
-                    <input type="time" id="ora" name="ora">
-                    <br>
-
-                    <label for="like"> Cât de mult vă place muzica lui Bad Bunny? &nbsp;</label>
-                    <input type="range" id="like" name="like">
-                    <br>
-
-                    <label for="url"> Site personal: </label>
-                    <input type="url" id="url" name="url">
-                    <br>
-
-                    <label for="song"> Care este cântecul dumneavoastră preferat? &nbsp;</label>
-                    <textarea id="song" name="song" rows="1" cols="25">Ex.: CAFé CON RON</textarea>
-                    <br><br>
-
-                    <button type="inreg" disabled>Înregistrează</button>
-                    <button type="reset">Resetează</button>
-                </form>
-            </section>
-            <br><br>
+                <img src="imagini/album1.png" alt="Cover Album X 100pre">
+                <img src="imagini/album2.png" alt="Cover Album YHLQMDLG">
+                <img src="imagini/album3.png" alt="Cover Album El Último Tour Del Mundo">
+                <img src="imagini/album4.png" alt="Cover Album Nadie Sabe Lo Que Va a Pasar Mañana">
+                <img src="imagini/album5.png" alt="Cover Album Un Verano Sin Ti">
+                <img src="imagini/album6.png" alt="Cover Album Debí Tirar Más Fotos">
+            </div>
         </main>
 
-    <footer>
-        <hr>
-        <span>&nbsp;&copy;</span> <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
-    </footer>
-</body>
+        <footer>
+            <hr>
+            <span>&nbsp;&copy;</span> <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
+        </footer>
+    </body>
+
+</html>
