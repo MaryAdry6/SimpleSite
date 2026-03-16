@@ -312,20 +312,32 @@ nav a:hover {
     background-color: var(--color-crem);
     margin-top: var(--header-height)
 }
-
+.video-principal {
+    height: 60vh;
+    width: 100%;
+    border: 5px solid var(--color-purple);
+    border-radius: var(--curbura);
+    
+    margin: var(--curbe-height) 0px;
+    
+    transition: all 0.4s ease-out;
+}
+.video-principal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 .galerie {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     height: 500px;
     gap: 15px;
-    padding-top: calc(var(--curbe-height) + 15px);
     padding-bottom: 15px;
 
     scrollbar-width: auto;
     scrollbar-color: var(--color-pink) var(--color-purple);
 }
-
 .item-galerie {
     flex: 0 0 auto;
     border: 5px solid var(--color-purple);
@@ -334,8 +346,7 @@ nav a:hover {
     border-radius: var(--curbura);
     transition: all 0.4s ease-out;
 }
-
-.item-galerie:hover {
+.item-galerie:hover main>iframe:hover{
     transform: translateY(-10px);
     box-shadow: 0px 10px 15px black;
 }
@@ -835,6 +846,32 @@ label {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESEN */
+#desen-main {
+    background: radial-gradient(circle at bottom right, var(--color-crem) 0%, var(--color-green) 65%);
+    margin-top: -35px;
+}
+svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
 
 
 
