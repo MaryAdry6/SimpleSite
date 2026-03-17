@@ -113,5 +113,53 @@ function initpage() {
     
     
     //SECTIUNEA 3
+    const btnLinie = document.getElementById("btn-linie");
+    const btnColoana = document.getElementById("btn-coloana");
+
+    //Inserare linie
+    btnLinie.addEventListener("click", function() {
+        const tabel = document.getElementById("tabel-melodii");
+        const pozitie = parseInt(document.getElementById("pozitie-tabel").value);
+        const culoare = document.getElementById("culoare-tabel").value;
+
+        const randuri = tabel.rows;
+
+        if (isNaN(pozitie) || pozitie < 0 || pozitie > randuri.length) {
+            alert("Poziție invalidă pentru linie! Introdu un număr între 0 și " + randuri.length);
+            return;
+        }
+
+        const randNou = tabel.insertRow(pozitie);
+        const numarCelule = randuri[0].children.length;
+        for (let i = 0; i < numarCelule; i++) {
+            const celulaNoua = randNou.insertCell(i);
+            
+            celulaNoua.style.backgroundColor = culoare;
+            celulaNoua.style.height = "10px";
+        }
+    });
+
+    //Inserare coloana
+    btnColoana.addEventListener("click", function() {
+        const tabel = document.getElementById("tabel-melodii");
+        const pozitie = parseInt(document.getElementById("pozitie-tabel").value);
+        const culoare = document.getElementById("culoare-tabel").value;
+
+        const randuri = tabel.rows;
+        const numarColoaneExistente = randuri[0].children.length;
+
+        if (isNaN(pozitie) || pozitie < 0 || pozitie > numarColoaneExistente) {
+            alert("Poziție invalidă pentru coloană! Introdu un număr între 0 și " + numarColoaneExistente);
+            return;
+        }
+
+        for (let i = 0; i < randuri.length; i++) {
+            const randCurent = randuri[i];
+            const celulaNoua = randCurent.insertCell(pozitie);
+            
+            celulaNoua.style.backgroundColor = culoare;
+            celulaNoua.style.width = "15px";
+        }
+    });
 }
 

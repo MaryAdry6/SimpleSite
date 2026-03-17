@@ -5,7 +5,7 @@
     --color-purple: #CFB2CF;
     --color-green: #998B58;
     --color-crem: #EEBB78;
-    --color-crem-transp: #eebb7866;
+    --color-crem-transp: #eebb78a6;
     --color-white: #FAFAFB;
     --header-height: 100px;
     --curbe-height: 20px;
@@ -909,7 +909,7 @@ svg {
 
 /* INVATA */
 #invata-main {
-    background-color: var(--color-green);
+    background-color: var(--color-crem);
     color:var(--color-white);
     padding-top: var(--curbe-height);
 }
@@ -1002,12 +1002,19 @@ svg {
 #invata-main h2 {
     font-family: var(--font-titlu);
     font-size: 30px;
+    color: var(--color-purple);
+    text-shadow: 3px 3px 8px var(--color-pink);
 }
 .invata-section {
     margin: 20px 50px;
     padding: 10px 20px;
+
     border: 2px solid var(--color-purple);
     border-radius: var(--curbura);
+
+    background-color: var(--color-green);
+    box-shadow: 5px 5px 20px var(--color-pink);
+
     font-family: var(--font-text);
     overflow: hidden;
 }
@@ -1038,7 +1045,7 @@ svg {
     word-break: break-word;     
 }
 
-.desen {
+.desen, .ctrl-tabel{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1046,7 +1053,7 @@ svg {
     margin-top: 20px;
     gap: 15px;
 }
-.desen label {
+.desen label, .ctrl-tabel label {
     padding: 10px 15px;
     
     background-color: var(--color-crem-transp);
@@ -1069,6 +1076,50 @@ svg {
     border-radius: var(--curbura);
     cursor: crosshair;
 }
+
+.ctrl-tabel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+.ctrl-tabel label, .ctrl-tabel input[type="button"] {
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: var(--curbura);
+}
+.ctrl-tabel label {
+    display: flex;
+    align-items: center;
+    
+    background-color: var(--color-crem-transp);
+    margin: 0;
+}
+.ctrl-tabel input[type="button"] {
+    padding: 0 20px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--color-white);
+    cursor: pointer;
+    
+    background-color: var(--color-crem-transp); 
+    border: 2px solid var(--color-pink);
+}
+.ctrl-tabel input[type="button"]:hover {
+    transition: 0.3s;
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 15px var(--color-purple);
+}
+
+
+
+
+
+
+
+
+
 
 
 
