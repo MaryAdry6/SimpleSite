@@ -13,6 +13,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
@@ -31,8 +33,46 @@
             </nav>
         </header>
 
-        <main>
+        <main id="invata-main">
+            <aside class="meniu-circ">
+                <div class="meniu-buton">☰</div>
+
+                <a href="#sectiune1" class="buton-secundar btn-1">Secțiunea 1</a>
+                <a href="#sectiune2" class="buton-secundar btn-2">Secțiunea 2</a>
+                <a href="#sectiune3" class="buton-secundar btn-3">Secțiunea 3</a>
+            </aside>
+
+            <section id="sectiune1" class="invata-section">
+                <h2>Informații Sistem</h2>
+                <ul>
+                    <li><strong>Data și Ora:</strong> <span id="info-data">Se încarcă...</span></li>
+                    <li><strong>Adresa URL:</strong> <span id="info-url">Se încarcă...</span></li>
+                    <li><strong>Browser:</strong> <span id="info-browser">Se obțin datele...</span></li>
+                    <li><strong>Sistem de Operare:</strong> <span id="info-os">Se obțin datele...</span></li>
+                    <li><strong>Locația curentă:</strong> <span id="info-locatie">Se cere permisiunea...</span></li>
+                </ul>
+            </section>
             
+            <section id="sectiune2" class="invata-section">
+                <h2>Ochelarii lui Bad Bunny</h2>
+                
+                <div class="desen">
+                    <label>
+                        Culoare Contur: 
+                        <input type="color" id="contur">
+                    </label>
+                    <label>
+                        Culoare Umplere: 
+                        <input type="color" id="umplere">
+                    </label>
+                </div><br>
+
+                <canvas id="canvas" width="1200" height="650"></canvas>
+            </section>
+            
+            <section id="sectiune3" class="invata-section">
+                <h2>Secțiunea 3</h2>
+            </section>
         </main>
 
         <footer>

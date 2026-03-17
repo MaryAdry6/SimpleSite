@@ -5,6 +5,7 @@
     --color-purple: #CFB2CF;
     --color-green: #998B58;
     --color-crem: #EEBB78;
+    --color-crem-transp: #eebb7866;
     --color-white: #FAFAFB;
     --header-height: 100px;
     --curbe-height: 20px;
@@ -219,7 +220,7 @@ nav a:hover {
     position: relative;
     background-color: var(--color-crem);
     color: var(--color-green);
-    padding: 45px 55px;
+    padding: 32px 60px;
 
     display: flex;
     align-items: center;
@@ -862,6 +863,13 @@ label {
 
 
 
+
+
+
+
+
+
+
 /* DESEN */
 #desen-main {
     background: radial-gradient(circle at bottom right, var(--color-crem) 0%, var(--color-green) 65%);
@@ -873,6 +881,194 @@ svg {
     height: auto;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INVATA */
+#invata-main {
+    background-color: var(--color-green);
+    color:var(--color-white);
+    padding-top: var(--curbe-height);
+}
+.meniu-circ {
+    position: fixed;
+    top: calc(var(--header-height));
+    left: 0;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+}
+.meniu-circ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-pink);
+    border-bottom-right-radius: 100%;
+    z-index: 1;
+    transition: all 0.4s ease-out;
+}
+.meniu-circ:hover::before {
+    width: 180px;
+    height: 180px;
+    box-shadow: 1px 1px 20px var(--color-purple);
+}
+.meniu-buton {
+    width: 60px;
+    height: 60px;
+    color: var(--color-white);
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 24px;
+    cursor: default;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.3s;
+}
+.meniu-circ:hover .meniu-buton {
+    transform: rotate(90deg);
+}
+.buton-secundar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--color-white);
+    border-radius: 50%;
+    white-space: nowrap;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-weight: bold;
+    padding: 2px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.meniu-circ:hover .btn-1 {
+    transform: translate(80px, 5px);
+    opacity: 1;
+}
+
+.meniu-circ:hover .btn-2 {
+    transform: translate(55px, 70px);
+    opacity: 1;
+}
+
+.meniu-circ:hover .btn-3 {
+    transform: translate(0px, 125px);
+    opacity: 1;
+}
+.buton-secundar:hover {
+    background-color: var(--color-purple);
+    color: var(--color-pink);
+    border-radius: var(--curbura);
+    padding: 2px;
+    transition: 0.5s;
+}
+
+#invata-main h2 {
+    font-family: var(--font-titlu);
+    font-size: 30px;
+}
+.invata-section {
+    margin: 20px 50px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-purple);
+    border-radius: var(--curbura);
+    font-family: var(--font-text);
+    overflow: hidden;
+}
+#sectiune1 ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+#sectiune1 li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    padding: 10px 15px;
+    
+    background-color: var(--color-crem-transp);
+    border-radius: var(--curbura);
+}
+#sectiune1 li span {
+    text-align: right;
+    max-width: 70%;
+    word-break: break-word;     
+}
+
+.desen {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 20px;
+    gap: 15px;
+}
+.desen label {
+    padding: 10px 15px;
+    
+    background-color: var(--color-crem-transp);
+    border-radius: var(--curbura);
+}
+#canvas {
+    background-image: url('../imagini/BadBunny_canvas.png');
+    background-size: cover;
+    background-position: center;
+
+    display: block;
+    max-width: 100%;
+    margin: 0px auto;
+    
+    /* width: 100%;
+    max-width: 100%;
+    height: auto; */
+
+    box-sizing: border-box;
+    border-radius: var(--curbura);
+    cursor: crosshair;
+}
 
 
 
