@@ -741,6 +741,7 @@ table {
     align-items: stretch;
 
     background-color: var(--color-purple);
+    color: var(--color-white);
     width: 40%;
     padding: 20px;
     margin: 0 auto;
@@ -755,30 +756,44 @@ table {
 }
 .inreg form {
     width: 90%;
-    height: 90%;
+    height: 100%;
     
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
-legend {
-    font-size: 20px;
+.inreg legend {
+    font-size: 25px;
     font-family: var(--font-titlu);
+
+    text-shadow: 3px 3px 8px var(--color-green);
     
 }
-label {
-    font-size: 15px;
+.inreg label {
+    font-size: 20px;
     font-family: var(--font-text);
 }
-.generale{
-    flex: 1;
-    border-radius: var(--curbura);
+.inreg input, .inreg select, .inreg textarea{
+    background-color: var(--color-purple);
+    color: var(--color-pink);
+
+    font-size: 15px;
+    font-family: var(--font-text);
+
     border: 2px solid var(--color-pink);
+    border-radius: var(--curbura);
 }
-.personale {
-    flex: 1;
+.generale, .personale {
+    /* flex: 1; */
+
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    gap: 10px 5px;
+    padding: 10px;
+
     border-radius: var(--curbura);
-    border: 2px solid var(--color-pink);
+    border: 3px solid var(--color-pink);
 }
 .inreg-butoane {
     display: flex;
@@ -790,7 +805,7 @@ label {
     background-color: var(--color-crem);
     color: var(--color-pink);
     border-radius: var(--curbura);
-    border: 2px solid var(--color-pink);
+    border: 3px solid var(--color-pink);
     font-family: var(--font-titlu);
 
     flex: 1; 
@@ -1045,7 +1060,7 @@ svg {
     word-break: break-word;     
 }
 
-.desen, .ctrl-tabel{
+.desen, .ctrl-tabel {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1058,6 +1073,12 @@ svg {
     
     background-color: var(--color-crem-transp);
     border-radius: var(--curbura);
+}
+.desen input, .ctrl-tabel input {
+    border: 2px solid var(--color-green);
+    border-radius: var(--curbura);
+    /* background-color: var(--color-green); */
+    margin-left: 3px;
 }
 #canvas {
     background-image: url('../imagini/BadBunny_canvas.png');
