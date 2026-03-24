@@ -41,7 +41,24 @@ while True:
             break
 
     print ('S-a terminat cititrea.')
+
+
     # TODO interpretarea sirului de caractere `linieDeStart` pentru a extrage numele resursei cerute
+    elemente = linieDeStart.split(' ')
+    resursa_ceruta = elemente[1]
+
     # TODO trimiterea răspunsului HTTP
+    mesaj = "Hello World! - " + resursa_ceruta
+
+    raspuns_http = (
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/plain; charset=utf-8\r\n"
+        "Connection: close\r\n"
+        "\r\n"
+        f"{mesaj}"
+    )
+    clientsocket.sendall(raspuns_http.encode()) # trimitere codificat ca bytestream
+
+
     clientsocket.close()
     print ('S-a terminat comunicarea cu clientul.')
