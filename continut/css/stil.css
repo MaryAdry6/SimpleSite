@@ -12,7 +12,7 @@
     --font-titlu: "Archivo Black", sans-serif;
     --font-text: "Josefin Sans", sans-serif;
     --curbura: 10px;
-    --latime: 1090px;
+    /* --latime: 1090px; */
 }
 
 * {
@@ -26,7 +26,7 @@ html {
     scrollbar-color: var(--color-pink) var(--color-purple);
 
     scroll-snap-type: y mandatory;
-    scroll-padding-top: calc(var(--header-height)); 
+    scroll-padding-top: var(--header-height); 
     scroll-behavior: smooth;
 }
 
@@ -735,8 +735,7 @@ table {
     overflow: hidden;
     display: flex;
 
-    z-index: -1;
-    background-color: var(--color-crem);
+    /* background-color: var(--color-crem); */
 }
 
 .inreg {
@@ -805,7 +804,7 @@ table {
     gap: 5px;
     margin-top: 10px;
 }
-.inreg-butoane button{
+.inreg-butoane button, .inreg-butoane input{
     background-color: var(--color-crem);
     color: var(--color-pink);
     border-radius: var(--curbura);
@@ -819,7 +818,7 @@ table {
     font-size: 20px;
     cursor: pointer;
 }
-.inreg-butoane button:hover {
+.inreg-butoane button:hover, .inreg-butoane input:hover {
     box-shadow: 3px 3px 15px var(--color-green);
     transition: 0.3s;
     transform: translateY(3px);
@@ -827,7 +826,7 @@ table {
 .img-stanga, .img-dreapta{
     position: absolute;
 
-    /* background-color: var(--color-crem); */
+    background-color: var(--color-crem);
 
     top: -10%;
     width: 30%;
