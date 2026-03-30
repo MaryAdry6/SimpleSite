@@ -1,126 +1,84 @@
-<!DOCTYPE html>
-<html lang = "ro">
+<div id="invata-main">
+    <aside class="meniu-circ">
+        <div class="meniu-buton">☰</div>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Învață</title>
+        <a href="#sectiune1" class="buton-secundar btn-1">Secțiunea 1</a>
+        <a href="#sectiune2" class="buton-secundar btn-2">Secțiunea 2</a>
+        <a href="#sectiune3" class="buton-secundar btn-3">Secțiunea 3</a>
+    </aside>
 
-        <link rel="icon" type="image/png"
-            href="imagini/icon.png"/>
-        <link rel="stylesheet" type="text/css"
-            href="css/stil.css" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-        <script src="js/script.js" defer></script>
-    </head>
-
-    <body>
-        <header>
-            <h1>Bad Bunny</h1>
-            <hr>
-            <nav>
-                <h2>
-                    <a href="index.html">Acasă</a>
-                    <a href="despre.html">Despre</a>
-                    <a href="video.html">Video</a>
-                    <a href="desen.html">Desen</a>
-                    <a href="invat.html">Învață</a>
-                    <a href="inregistreaza.html">Înregistrează-te </a>
-                </h2>
-            </nav>
-        </header>
-
-        <main id="invata-main">
-            <aside class="meniu-circ">
-                <div class="meniu-buton">☰</div>
-
-                <a href="#sectiune1" class="buton-secundar btn-1">Secțiunea 1</a>
-                <a href="#sectiune2" class="buton-secundar btn-2">Secțiunea 2</a>
-                <a href="#sectiune3" class="buton-secundar btn-3">Secțiunea 3</a>
-            </aside>
-
-            <section id="sectiune1" class="invata-section">
-                <h2>Informații Sistem</h2>
-                <ul>
-                    <li><strong>Data și Ora:</strong> <span id="info-data">Se încarcă...</span></li>
-                    <li><strong>Adresa URL:</strong> <span id="info-url">Se încarcă...</span></li>
-                    <li><strong>Browser:</strong> <span id="info-browser">Se obțin datele...</span></li>
-                    <li><strong>Sistem de Operare:</strong> <span id="info-os">Se obțin datele...</span></li>
-                    <li><strong>Locația curentă:</strong> <span id="info-locatie">Se cere permisiunea...</span></li>
-                </ul>
-            </section>
-            
-            <section id="sectiune2" class="invata-section">
-                <h2>Ochelarii lui Bad Bunny</h2>
-                
-                <div class="desen">
-                    <label>
-                        Culoare Contur: 
-                        <input type="color" id="contur">
-                    </label>
-                    <label>
-                        Culoare Umplere: 
-                        <input type="color" id="umplere">
-                    </label>
-                </div><br>
-
-                <canvas id="canvas" width="1200" height="650"></canvas>
-            </section>
-            
-            <section id="sectiune3" class="invata-section">
-                <h2>Topul Melodiilor lui Bad Bunny</h2>
-                
-                <div class="ctrl-tabel">
-                    <label>
-                        Poziție (index): 
-                        <input type="number" id="pozitie-tabel" min="0" value="1">
-                    </label>
-                    <label>
-                        Culoare fundal: 
-                        <input type="color" id="culoare-tabel">
-                    </label>
-                    
-                    <input type="button" id="btn-linie" value="Inserează Linie">
-                    <input type="button" id="btn-coloana" value="Inserează Coloană">
-                </div>
-
-                <div class="tabel-dinamic">
-                    <table id="tabel-melodii">
-                        <thead>
-                            <tr>
-                                <th>Melodie</th>
-                                <th>Album</th>
-                                <th>Feature</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tití Me Preguntó</td>
-                                <td>Un Verano Sin Ti</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Baticano</td>
-                                <td>nadie sabe lo que va a pasar mañana</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>CAFé CON RON</td>
-                                <td>DeBÍ TiRAR MáS FOToS</td>
-                                <td>Los Pleneros de la Cresta</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <hr>
-                <span>&nbsp;&copy;</span> <i>2026</i> Proiect 1 - Ciurilă Maria-Adriana
-        </footer>
-    </body>
+    <section id="sectiune1" class="invata-section">
+        <h2>Informații Sistem</h2>
+        <ul>
+            <li><strong>Data și Ora:</strong> <span id="info-data">Se încarcă...</span></li>
+            <li><strong>Adresa URL:</strong> <span id="info-url">Se încarcă...</span></li>
+            <li><strong>Browser:</strong> <span id="info-browser">Se obțin datele...</span></li>
+            <li><strong>Sistem de Operare:</strong> <span id="info-os">Se obțin datele...</span></li>
+            <li><strong>Locația curentă:</strong> <span id="info-locatie">Se cere permisiunea...</span></li>
+        </ul>
+    </section>
+    
+    <section id="sectiune2" class="invata-section">
+        <h2>Ochelarii lui Bad Bunny</h2>
         
+        <div class="desen">
+            <label>
+                Culoare Contur: 
+                <input type="color" id="contur">
+            </label>
+            <label>
+                Culoare Umplere: 
+                <input type="color" id="umplere">
+            </label>
+        </div><br>
+
+        <canvas id="canvas" width="1200" height="650"></canvas>
+    </section>
+    
+    <section id="sectiune3" class="invata-section">
+        <h2>Topul Melodiilor lui Bad Bunny</h2>
+        
+        <div class="ctrl-tabel">
+            <label>
+                Poziție (index): 
+                <input type="number" id="pozitie-tabel" min="0" value="1">
+            </label>
+            <label>
+                Culoare fundal: 
+                <input type="color" id="culoare-tabel">
+            </label>
+            
+            <input type="button" id="btn-linie" value="Inserează Linie">
+            <input type="button" id="btn-coloana" value="Inserează Coloană">
+        </div>
+
+        <div class="tabel-dinamic">
+            <table id="tabel-melodii">
+                <thead>
+                    <tr>
+                        <th>Melodie</th>
+                        <th>Album</th>
+                        <th>Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tití Me Preguntó</td>
+                        <td>Un Verano Sin Ti</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Baticano</td>
+                        <td>nadie sabe lo que va a pasar mañana</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>CAFé CON RON</td>
+                        <td>DeBÍ TiRAR MáS FOToS</td>
+                        <td>Los Pleneros de la Cresta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
