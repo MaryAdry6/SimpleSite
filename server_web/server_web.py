@@ -47,7 +47,23 @@ def proceseaza_client(clientsocket, address):
         try:
             with open(cale_fisier, 'rb') as fisier:
                 continut_fisier = fisier.read()
+
+
+            if cale_fisier.endswith('.json'):
+                tip_continut = 'application/json'
+            elif cale_fisier.endswith('.xml'):
+                tip_continut = 'application/xml'
+            elif cale_fisier.endswith('.css'):
+                tip_continut = 'text/css'
+            elif cale_fisier.endswith('.js'):
+                tip_continut = 'application/javascript'
+            elif cale_fisier.endswith('.png') or cale_fisier.endswith('.ico'):
+                tip_continut = 'image/png'
+            else:
+                # Daca e .html sau nu recunoastem extensia, il tratam ca html
+                tip_continut = 'text/html'
                 
+
             # compresia gzip
             continut_comprimat = gzip.compress(continut_fisier)
             dimensiune = len(continut_comprimat)
@@ -55,6 +71,7 @@ def proceseaza_client(clientsocket, address):
             raspuns_headers = (
                 "HTTP/1.1 200 OK\r\n"
                 f"Content-Length: {dimensiune}\r\n"
+                f"Content-Type: {tip_continut}; charset=utf-8\r\n"
                 "Content-Encoding: gzip\r\n"
                 "Connection: close\r\n"
                 "\r\n"

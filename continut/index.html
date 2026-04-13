@@ -16,21 +16,56 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <script>
+            async function schimbaContinut(resursa, jsFisier, jsFunctie) {
+                const url = '/' + resursa;
+                try {
+                    const response = await fetch(url);
+                    if(!response.ok) {
+                        document.getElementById('continut').innerHTML = 'A aparut o eroare';
+                        return;
+                    }
+
+                    const result = await response.text();
+                    document.getElementById('continut').innerHTML = result;
+                    
+                    if (jsFisier) {
+                        var elementScript = document.createElement('script');
+                        elementScript.onload = function () {
+                            console.log("hello");
+                            if (jsFunctie) {
+                                window[jsFunctie]();
+                            }
+                        };
+                        elementScript.src = jsFisier;
+                        document.head.appendChild(elementScript);
+                    } else {
+                        if (jsFunctie) {
+                            window[jsFunctie]();
+                        }
+                    }
+                } catch (error) {
+                    console.error(error.message);
+                }
+            }
+
+        </script>
     </head>
 
-    <body>
+    <body onload="schimbaContinut('acasa.html')">
         <header>
             <h1>Bad Bunny</h1>
             <hr>
             <!-- FLEXBOX mereu pe parinte, nu pe copii (in nav, nu in a) -->
             <nav id="nav-main">
                 <h2>
-                    <a href="index.html">Acasă</a>
-                    <a href="despre.html">Despre</a>
-                    <a href="video.html">Video</a>
-                    <a href="desen.html">Desen</a>
-                    <a href="invat.html">Învață</a>
-                    <a href="inregistreaza.html">Înregistrează-te </a>
+                    <a onclick="schimbaContinut('acasa.html')">Acasă</a>
+                    <a onclick="schimbaContinut('despre.html')">Despre</a>
+                    <a onclick="schimbaContinut('video.html')">Video</a>
+                    <a onclick="schimbaContinut('desen.html')">Desen</a>
+                    <a onclick="schimbaContinut('invat.html', 'js/script.js', 'initpage')">Învață</a>
+                    <a onclick="schimbaContinut('inregistreaza.html')">Înregistrează-te </a>
                 </h2>
             </nav>
         </header>
