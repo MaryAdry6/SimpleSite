@@ -312,7 +312,7 @@ nav a:hover {
 
 #video-main {
     background-color: var(--color-crem);
-    margin-top: var(--header-height)
+    padding-top: var(--curbe-height)
 }
 .video-principal {
     height: 60vh;
@@ -904,7 +904,7 @@ table {
 /* DESEN */
 #desen-main {
     background: radial-gradient(circle at bottom right, var(--color-crem) 0%, var(--color-green) 65%);
-    margin-top: -35px;
+    height: 85vh;
 }
 svg {
     width: 100%;
@@ -1158,6 +1158,34 @@ svg {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PERSOANE*/
+.pers h2 {
+    padding: var(--curbe-height) 30px 0px;
+    
+    font-family: var(--font-titlu);
+    font-size: 25px;
+    color: var(--color-crem);
+    text-shadow: 3px 3px 8px var(--color-purple);
+    background-color: var(--color-green);
+}
+.tabel-persoane {
+    padding: 10px 30px;
+}
 
 
 

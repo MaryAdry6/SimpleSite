@@ -1,36 +1,34 @@
-<!-- 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 -->
-
 <!DOCTYPE persoane SYSTEM "persoane.dtd">
 <persoane>
         <persoana id="1">
-            <nume>Ciurila</nume>
+            <nume>Ciurilă</nume>
             <prenume>Adriana</prenume>
             <varsta>21</varsta>
             <inaltime>1.6</inaltime>
             <adresa>
                 <strada>Alexandru cel Bun</strada>
                 <numar>47</numar>
-                <localitate>Iasi</localitate>
-                <judet>Iasi</judet>
-                <tara>Romania</tara>
+                <localitate>Iași</localitate>
+                <judet>Iași</judet>
+                <tara>România</tara>
             </adresa>
-            <hobby>jocuri video</hobby>
+            <hobby>cititul</hobby>
             <studii>facultate</studii>
         </persoana>
 
         <persoana id="2">
-            <nume>Bad</nume>
-            <prenume>Bunny</prenume>
-            <varsta>31</varsta>
+            <nume>Pănescu</nume>
+            <prenume>Andrei</prenume>
+            <varsta>20</varsta>
             <inaltime>1.8</inaltime>
             <adresa>
-                <strada>Luis Muñoz Rivera</strada>
-                <numar>275</numar>
-                <localitate>Bayamon</localitate>
-                <judet>Bayamon</judet>
-                <tara>Puerto Rico</tara>
+                <strada>Zimbrului</strada>
+                <numar>17B</numar>
+                <localitate>Iași</localitate>
+                <judet>Iași</judet>
+                <tara>România</tara>
             </adresa>
-            <hobby>cantat</hobby>
+            <hobby>cântatul la tobe</hobby>
             <studii>facultate</studii>
         </persoana>
 
@@ -48,5 +46,37 @@
             </adresa>
             <hobby>curse de masini</hobby>
             <studii>liceu</studii>
+        </persoana>
+
+        <persoana id="4">
+            <nume>Popa</nume>
+            <prenume>Teo</prenume>
+            <varsta>22</varsta>
+            <inaltime>1.9</inaltime>
+            <adresa>
+                <strada>Crăcălia</strada>
+                <numar>2</numar>
+                <localitate>Panciu</localitate>
+                <judet>Vrancea</judet>
+                <tara>România</tara>
+            </adresa>
+            <hobby>cântatul la chitară</hobby>
+            <studii>facultate</studii>
+        </persoana>
+
+        <persoana id="5">
+            <nume>Frandeș</nume>
+            <prenume>Codrin</prenume>
+            <varsta>22</varsta>
+            <inaltime>1.9</inaltime>
+            <adresa>
+                <strada>Soarelui</strada>
+                <numar>67</numar>
+                <localitate>Dorohoi</localitate>
+                <judet>Botoșani</judet>
+                <tara>România</tara>
+            </adresa>
+            <hobby>jocurile video</hobby>
+            <studii>facultate</studii>
         </persoana>
     </persoane>
