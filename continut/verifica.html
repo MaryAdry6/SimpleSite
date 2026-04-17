@@ -1,15 +1,17 @@
 <section class="verifica">
-    <h2>Verificare Utilizator</h2>
+    <div id="patrat">
+        <h2>Verificare Utilizator</h2>
 
-    <div>
-        <label for="verifica-username">Utilizator:</label><br>
-        <input type="text" id="verifica-username" name="verifica-username"><br><br>
+        <div id="campuri">
+            <label for="verifica-username">Utilizator:</label><br>
+            <input type="text" id="verifica-username" name="verifica-username"><br><br>
+            
+            <label for="verifica-password">Parolă:</label><br>
+            <input type="password" id="verifica-password" name="verifica-password"><br><br>
+            
+            <button onclick="valideaza()">Verifică</button>
+        </div>
         
-        <label for="verifica-password">Parolă:</label><br>
-        <input type="password" id="verifica-password" name="verifica-password"><br><br>
-        
-        <button onclick="valideaza()">Verifică</button>
+        <div id="verificare"></div>
     </div>
-    
-    <div id="verificare"></div>
 </section>
