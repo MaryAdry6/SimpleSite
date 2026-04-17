@@ -49,6 +49,32 @@
                     console.error(error.message);
                 }
             }
+            
+            document.addEventListener('submit', async function(event) {
+                if (event.target && event.target.id === 'formInregistrare') {
+                    event.preventDefault();
+
+                    const formData = new FormData(event.target);
+                    const datePentruServer = new URLSearchParams(formData);
+
+                    try {
+                        const response = await fetch('/api/utilizatori', {
+                            method: 'POST',
+                            body: datePentruServer
+                        });
+
+                        if (response.ok) {
+                            alert("Înregistrare realizată cu succes!"); 
+                            
+                            window.location.reload(); 
+                        } else {
+                            console.error('Eroare la Înregistrare: Serverul a returnat o eroare.');
+                        }
+                    } catch (error) {
+                        console.error('Eroare conexiune:', error);
+                    }
+                }
+            });
 
         </script>
     </head>

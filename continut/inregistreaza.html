@@ -37,15 +37,15 @@
     </div>
 
     <section class="inreg">
-        <form>
+        <form id="formInregistrare" method="POST" action="/api/utilizatori">
             <fieldset class="generale">
                 <legend>Informații generale:</legend>
 
                 <label for="name"> Nume utilizator: </label>
-                <input type="text" id="name" name="NumeUtil">
+                <input type="text" id="name" name="utilizator">
 
                 <label for="parola"> Parolă: </label>
-                <input type="password" id="parola" name="Parola">
+                <input type="password" id="parola" name="parola">
 
                 <label for="nume"> Nume: </label>
                 <input type="text" id="nume" name="Nume">
@@ -71,8 +71,8 @@
                 </select>
 
                 <label for="album"> Melodia preferată: </label>
-                <input list="album" id="album" name="album" placeholder="Scrie sau alege...">
-                <datalist name="album" id="album">
+                <input list="lista-albume" id="album" name="album" placeholder="Scrie sau alege...">
+                <datalist name="lista-albume" id="lista-albume">
                     <option value="X 100pre"></option>
                     <option value="YHLQMDLG"></option>
                     <option value="El Último Tour Del Mundo"></option>
@@ -101,7 +101,7 @@
             </fieldset>
 
             <div class="inreg-butoane">
-                <input type="submit" value="Înregistrează" disabled></input>
+                <input type="submit" value="Înregistrează">
                 <button type="reset">Resetează</button>
             </div>
         </form>

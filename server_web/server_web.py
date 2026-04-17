@@ -8,6 +8,8 @@ import socket
 import os
 import gzip
 import threading
+import json
+import urllib.parse
 
 
 # ***********************************************************************************************************
@@ -24,9 +26,9 @@ def proceseaza_client(clientsocket, address):
             if not data:
                 break
             cerere = cerere + data.decode()
-            pozitie = cerere.find('\r\n')
+            pozitie = cerere.find('\r\n\r\n')
             if (pozitie > -1):
-                linieDeStart = cerere[0:pozitie]
+                linieDeStart = cerere.split('\r\n')[0]
                 print(f"[{address}] S-a citit linia de start: {linieDeStart}")
                 break
             
@@ -35,9 +37,51 @@ def proceseaza_client(clientsocket, address):
 
         elemente = linieDeStart.split(' ')
         if len(elemente) > 1:
+            metoda = elemente[0]
             resursa_ceruta = elemente[1]
         else:
+            metoda = 'GET'
             resursa_ceruta = '/'
+
+        # -------------------------------------------------------------------------
+        # cerere POST
+        if elemente[0] == 'POST':
+            while '\r\n\r\n' not in cerere:
+                data = clientsocket.recv(1024)
+                if not data: break
+                cerere += data.decode()
+                
+            parti = cerere.split('\r\n\r\n')
+            if len(parti) > 1:
+                corp = parti[1].strip('\x00').strip()
+                if corp:
+                    date_formular = urllib.parse.parse_qs(corp)
+                    nou_utilizator = {k: v[0] for k, v in date_formular.items()}
+                    
+                    cale_json = os.path.join('continut', 'resurse', 'utilizatori.json')
+                    
+                    utilizatori = []
+                    if os.path.exists(cale_json):
+                        with open(cale_json, 'r', encoding='utf-8') as f:
+                            try: utilizatori = json.load(f)
+                            except json.JSONDecodeError: pass
+                            
+                    utilizatori.append(nou_utilizator)
+                    
+                    with open(cale_json, 'w', encoding='utf-8') as f:
+                        json.dump(utilizatori, f, indent=4)
+                        
+            
+            raspuns = (
+                "HTTP/1.1 200 OK\r\n"
+                "Content-Type: application/json; charset=utf-8\r\n"
+                "Connection: close\r\n"
+                "\r\n"
+            )
+            clientsocket.sendall(raspuns.encode())
+            print(f"[{address}] Utilizator inregistrat cu succes (SPA).")
+            return
+        # -------------------------------------------------------------------------
 
         if resursa_ceruta == '/':
             resursa_ceruta = '/index.html'

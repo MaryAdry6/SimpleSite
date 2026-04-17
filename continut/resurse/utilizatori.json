@@ -1,1 +1,17 @@
-[{ "utilizator": "test", "parola": "test"}]
+[
+    {
+        "utilizator": "test",
+        "parola": "test"
+    },
+    {
+        "utilizator": "adry",
+        "parola": "123456",
+        "Nume": "Ciurila",
+        "Prenume": "Adriana",
+        "email": "maria.adriana.jojo66@gmail.com",
+        "sex": "Feminin",
+        "culoare": "#000000",
+        "like": "4",
+        "song": "Pentru c\u0103 ..."
+    }
+]
