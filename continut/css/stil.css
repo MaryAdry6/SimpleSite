@@ -1312,6 +1312,101 @@ svg {
 
 
 
+/* CUMPARATURI */
+.verifica2 {
+    height: 85vh;
+    background-color: var(--color-crem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-text);
+}
+#patrat2 {
+    background-color: var(--color-purple);
+    height: 40vh;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 3px solid var(--color-pink);
+    border-radius: var(--curbura);
+    box-shadow: 5px 5px 15px var(--color-green);
+}
+#patrat2 h2 {
+    font-family: var(--font-titlu);
+    font-size: 40px;
+    color: var(--color-green);
+    text-shadow: 3px 3px 8px var(--color-crem-transp);
+
+}
+#campuri2 {
+    margin: 10px 0px;
+
+    font-size: 20px;
+    color: var(--color-green);
+}
+#campuri2 input, #campuri2 select {
+    background-color: var(--color-purple);
+    color: var(--color-pink);
+    font-size: 20px;
+
+    border: 2px solid var(--color-green);
+    border-radius: var(--curbura);
+}
+#campuri2 button {
+    font-family: var(--font-titlu);
+    font-size: 20px;
+    background-color: var(--color-purple);
+    color: var(--color-pink);
+
+    padding: 5px;
+
+    border: 2px solid var(--color-green);
+    border-radius: var(--curbura);
+}
+#campuri2 button:hover{
+    box-shadow: 5px 5px 15px var(--color-green);
+    transition: 0.3s;
+    transform: translateY(3px);
+}
+#mesaj {
+    color: var(--color-pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
