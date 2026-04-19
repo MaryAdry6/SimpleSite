@@ -1318,15 +1318,23 @@ svg {
     background-color: var(--color-crem);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
     font-family: var(--font-text);
 }
+#orizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
 #patrat2, #patrat3 {
     background-color: var(--color-purple);
-    height: 40vh;
+    height: 45vh;
+    width: 50vh;
     padding: 30px;
 
     display: flex;
@@ -1337,7 +1345,20 @@ svg {
     border-radius: var(--curbura);
     box-shadow: 5px 5px 15px var(--color-green);
 }
-#patrat2 h2, #patrat3 h2 {
+#patrat1 {
+    background-color: var(--color-purple);
+    height: 20vh;
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 3px solid var(--color-pink);
+    border-radius: var(--curbura);
+    box-shadow: 5px 5px 15px var(--color-green);
+}
+#patrat2 h2, #patrat3 h2, #patrat1 h2 {
     font-family: var(--font-titlu);
     font-size: 40px;
     color: var(--color-green);

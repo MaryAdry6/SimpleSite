@@ -1,50 +1,65 @@
 <section class="verifica2">
-    <div id="patrat2">
-        <h2>Adaugă în Coș</h2>
-        
-        <form id="form-cumparaturi">
-            <div id="campuri2">
-                <label for="nume">Alege Produsul:</label><br>
-                <select id="nume-prod" name="nume">
-                    <option value="">-- Selectează merch-ul --</option>
-                    <option value="Tricou">Tricou</option>
-                    <option value="Șapcă">Șapcă</option>
-                    <option value="Ecuson">Ecuson</option>
-                    <option value="Breloc">Breloc</option>
-                    <option value="Autograf">Poză cu Autograf</option>
-                </select>
-            </div>
+    <div id="patrat1">
+        <h2>Metoda de salvare:</h2>
+        <div id="campuri2">
+            <input type="radio" id="stocare-ls" name="metoda_stocare" value="localstorage" checked>
+            <label for="stocare-ls">Local Storage</label>
+        </div>
             
-            <div id="campuri2">
-                <label for="cantitate">Cantitate:</label><br>
-                <input type="number" id="cantitate" name="cantitate" min="1" value="1" required>
-            </div>
-
-            <div id="campuri2">
-                <button type="submit">Adaugă</button>
-            </div>
-        </form>
-
-        <p id="mesaj"></p>
+        <div id="campuri2">
+            <input type="radio" id="stocare-idb" name="metoda_stocare" value="indexeddb">
+            <label for="stocare-idb">IndexedDB</label>
+        </div>
     </div>
 
-    <div id="patrat3">
-        <div>
-            <h2>Lista Ta</h2>
-            <button type="button" id="btn-goleste-lista">Golește Lista</button>
+    <section id="orizontal">
+        <div id="patrat2">
+            <h2>Adaugă în Coș</h2>
+            
+            <form id="form-cumparaturi">
+                <div id="campuri2">
+                    <label for="nume">Alege Produsul:</label><br>
+                    <select id="nume-prod" name="nume">
+                        <option value="">-- Selectează merch-ul --</option>
+                        <option value="Tricou">Tricou</option>
+                        <option value="Șapcă">Șapcă</option>
+                        <option value="Ecuson">Ecuson</option>
+                        <option value="Breloc">Breloc</option>
+                        <option value="Autograf">Poză cu Autograf</option>
+                    </select>
+                </div>
+                
+                <div id="campuri2">
+                    <label for="cantitate">Cantitate:</label><br>
+                    <input type="number" id="cantitate" name="cantitate" min="1" value="1" required>
+                </div>
+
+                <div id="campuri2">
+                    <button type="submit">Adaugă</button>
+                </div>
+            </form>
+
+            <p id="mesaj"></p>
         </div>
 
-        <table id="zona-tabel">
-            <thead>
-                <tr>
-                    <th>Nr.</th>
-                    <th>Nume Produs</th>
-                    <th>Cantitate</th>
-                </tr>
-            </thead>
-            
-            <tbody id="zona-tabel-body">
-            </tbody>
-        </table>
-    </div>
+        <div id="patrat3">
+            <div>
+                <h2>Lista Ta</h2>
+                <button type="button" id="btn-goleste-lista">Golește Lista</button>
+            </div>
+
+            <table id="zona-tabel">
+                <thead>
+                    <tr>
+                        <th>Nr.</th>
+                        <th>Nume Produs</th>
+                        <th>Cantitate</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="zona-tabel-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
 </section>
