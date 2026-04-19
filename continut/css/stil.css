@@ -91,7 +91,6 @@ hr {
 
 
 /* BARA NAVIGARE */
-
 header {
     position: fixed;
     top: 0px;
@@ -143,7 +142,7 @@ nav a:hover {
     color: var(--color-pink);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1380px) {
     :root {
         --header-height: 125px; 
     }
@@ -152,10 +151,14 @@ nav a:hover {
         padding-bottom: 0px;
     }
 
-    nav h2 {
+    nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        text-align: center;
+    }
+    nav a {
+        padding: 5px 10px;
     }
 }
 
