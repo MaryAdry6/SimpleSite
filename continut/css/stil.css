@@ -1320,10 +1320,11 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
     font-family: var(--font-text);
 }
-#patrat2 {
+#patrat2, #patrat3 {
     background-color: var(--color-purple);
     height: 40vh;
     padding: 30px;
@@ -1336,7 +1337,7 @@ svg {
     border-radius: var(--curbura);
     box-shadow: 5px 5px 15px var(--color-green);
 }
-#patrat2 h2 {
+#patrat2 h2, #patrat3 h2 {
     font-family: var(--font-titlu);
     font-size: 40px;
     color: var(--color-green);
@@ -1357,7 +1358,7 @@ svg {
     border: 2px solid var(--color-green);
     border-radius: var(--curbura);
 }
-#campuri2 button {
+#campuri2 button, #patrat3 button {
     font-family: var(--font-titlu);
     font-size: 20px;
     background-color: var(--color-purple);
@@ -1368,7 +1369,7 @@ svg {
     border: 2px solid var(--color-green);
     border-radius: var(--curbura);
 }
-#campuri2 button:hover{
+#campuri2 button:hover, #patrat3 button:hover {
     box-shadow: 5px 5px 15px var(--color-green);
     transition: 0.3s;
     transform: translateY(3px);
@@ -1376,7 +1377,32 @@ svg {
 #mesaj {
     color: var(--color-pink);
 }
-
+#patrat3 table {
+    background-color: var(--color-purple);
+    width: 100%;
+    height: 80vh;
+}
+#patrat3 th, #patrat3 td {
+    border: 2px solid var(--color-green);
+    border-radius: var(--curbura);
+    text-align: center;
+    font-family: var(--font-text);
+    font-size: 20px;
+    background-color: var(--color-crem-transp);
+    color: var(--color-pink)
+}
+#patrat3 th {
+    font-family: var(--font-titlu);
+    font-size: 25px;
+    color: var(--color-pink);
+    -webkit-text-stroke: 1px var(--color-purple);
+}
+#patrat3 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
 
 

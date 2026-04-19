@@ -24,11 +24,47 @@ const salveazaProduse = (produse) => {
     });
 };
 
+async function afiseazaLista() {
+    const corpTabel = document.getElementById('zona-tabel-body');
+    if (!corpTabel) return;
+
+    const produse = await preiaProduse();
+
+    if (produse.length === 0) {
+        corpTabel.innerHTML = "<tr><td colspan='3'>Coșul este gol.</td></tr>";
+        return;
+    }
+
+    let html = "";
+    produse.forEach((p, index) => {
+        html += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${p.nume}</td>
+                    <td>${p.cantitate}</td>
+                 </tr>`;
+    });
+    
+    corpTabel.innerHTML = html;
+}
+
 function initCumparaturi() {
     const form = document.getElementById('form-cumparaturi');
     const mesajInfo = document.getElementById('mesaj');
 
     if (!form) return;
+
+    afiseazaLista();
+
+    let workerCumparaturi;
+    if (window.Worker) {
+        workerCumparaturi = new Worker('js/worker.js');
+        
+        workerCumparaturi.onmessage = function(event) {
+            if (event.data === "actualizeaza_tabel") {
+                afiseazaLista();
+            }
+        };
+    }
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -66,8 +102,33 @@ function initCumparaturi() {
             
             setTimeout(() => { mesajInfo.textContent = ""; }, 3000);
 
+            if (workerCumparaturi) {
+                workerCumparaturi.postMessage({ 
+                    nume: numeProdus, 
+                    cantitate: cantitateProdus 
+                });
+            } else {
+                afiseazaLista();
+            }
+
         } catch (eroare) {
             mesajInfo.textContent = eroare;
         }
     });
+
+    const btnGoleste = document.getElementById('btn-goleste-lista');
+    
+    if (btnGoleste) {
+        btnGoleste.addEventListener('click', () => {
+            if (confirm("Ești sigur că vrei să ștergi tot coșul de cumpărături?")) {
+                
+                localStorage.removeItem('listaCumparaturi');
+                
+                afiseazaLista();
+                
+                mesajInfo.textContent = "Coșul a fost golit!";
+                setTimeout(() => { mesajInfo.textContent = ""; }, 3000);
+            }
+        });
+    }
 }
