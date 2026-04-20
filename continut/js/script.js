@@ -129,8 +129,8 @@ function initpage() {
             return;
         }
 
-        const randNou = tabel.insertRow(pozitie);
         const numarCelule = randuri[0].children.length;
+        const randNou = tabel.insertRow(pozitie);
         for (let i = 0; i < numarCelule; i++) {
             const celulaNoua = randNou.insertCell(i);
             
