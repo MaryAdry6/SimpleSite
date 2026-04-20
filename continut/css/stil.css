@@ -572,6 +572,11 @@ nav a:hover {
     transition: 0.3s;
     transform: translateY(3px);
 }
+.butoane button:disabled {
+    background-color: var(--color-crem);
+    color: var(--color-green);
+    border: var(--color-crem-transp);
+}
 
 
 
