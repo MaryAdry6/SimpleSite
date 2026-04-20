@@ -45,7 +45,7 @@ def proceseaza_client(clientsocket, address):
 
         # -------------------------------------------------------------------------
         # cerere POST
-        if elemente[0] == 'POST':
+        if metoda == 'POST' and resursa_ceruta == '/api/utilizatori':
             while '\r\n\r\n' not in cerere:
                 data = clientsocket.recv(1024)
                 if not data: break
